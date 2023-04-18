@@ -12,18 +12,18 @@ db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
 <i><b>👋 Hey, </i>{}\n
-<b>I'm Direct Link Generator Bot.</b>\n
+<b>I'm Direct Link Generator Bot.</b>
 <b>Click on help to get more information</b>\n
-<b>WARNING</b></i>
-<b>Porn = Ban.</b>\n\n
+<b>WARNING</b>
+<b>Porn = Ban.</b>\n
 <i><b>🍃 Bot maintained by :</b>@abeseil</i>"""
 
 HELP_TEXT = """
 <b>Send any file from Telegram.</b>
-<b>I will share external shareable links !.</b>
+<b>I will share external shareable links!</b>
 <b>You can add me to your channel too <3</b>
-<b>Link with heroku speed:</b>\n
-<b>WARNING</b>\n
+<b>Link with heroku speed.</b>\n
+<b>WARNING</b>
 <b>Porn = Ban.</b>\n
 <i>Contact dev or report bugs</i> <b>: <a href='https://abeseil.t.me/'>Abeseil</a></b>"""
 
