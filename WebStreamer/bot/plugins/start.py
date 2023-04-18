@@ -187,12 +187,12 @@ async def start(b, m):
                                      file_name)
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n
-<b>🚸 Nᴏᴛᴇ : Lɪɴᴋ ᴇxᴘɪʀᴇᴅ ɪɴ 24 ʜᴏᴜʀꜱ</b>\n
-<i>🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :</i> <b>@AvishkarPatil</b>
+<i><u>Your link here!</u></i>\n
+<b>File name :</b> <i>{}</i>\n
+<b>File size :</b> <i>{}</i>\n
+<b>Download :</b> <i>{}</i>\n
+<b>Not : Link will expire in 24h</b>\n
+<i>Bot maintained by :</i> <b>@abeseil</b>
 """
 
         await m.reply_text(
