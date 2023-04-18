@@ -11,20 +11,20 @@ from pyrogram.enums.parse_mode import ParseMode
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
-<i>👋 Hey,</i>{}\n
-<i>I'm Direct Link Generator Bot</i>\n
-<i>Click on help to get more information</i>\n
-<i><u>WARNING 🚸</u></i>
-<b>🔞 Porn = Ban.</b>\n\n
+<i><b>👋 Hey,</i>{}\n
+<b>I'm Direct Link Generator Bot.</b>\n
+<b>Click on help to get more information</b>\n
+<b>WARNING</b></i>
+<b>Porn = Ban.</b>\n\n
 <i><b>🍃 Bot maintained by :</b>@abeseil</i>"""
 
 HELP_TEXT = """
-<i> Send any file from Telegram.</i>
-<i> I will share external shareable links !.</i>
-<i> You can add me to your channel too <3</i>
-<i> Link with heroku speed:</i>\n
-<u>🔸 WARNING 🚸</u>\n
-<b>🔞 Porn = Ban.</b>\n
+<b>Send any file from Telegram.</b>
+<b>I will share external shareable links !.</b>
+<b>You can add me to your channel too <3</b>
+<b>Link with heroku speed:</b>\n
+<b>WARNING</b>\n
+<b>Porn = Ban.</b>\n
 <i>Contact dev or report bugs</i> <b>: <a href='https://abeseil.t.me/'>Abeseil</a></b>"""
 
 ABOUT_TEXT = """
@@ -35,23 +35,23 @@ ABOUT_TEXT = """
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
 
@@ -100,7 +100,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
+            f"**New user joined:** \n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
